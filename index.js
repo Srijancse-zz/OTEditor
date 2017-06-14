@@ -4,7 +4,7 @@
 var express = require('express');
 var app = express();
 var sleep = require('sleep');
-var ot = require('./pt);
+var ot = require('./ot');
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
