@@ -27,3 +27,19 @@ function pos(tree, i) {
 	return base + i;
 }
 
+function pos_inv(tree, i) {
+	var answer = i;
+	var x = 0;
+	while (tree != null) {
+		if (i < tree.value) {
+			tree = tree.left;
+		} else {
+			i = i - tree.value;
+			answer = answer - sizeOf(tree.left) + 1;
+			tree = tree.right;
+		}
+	}
+	return answer;
+}
+
+
