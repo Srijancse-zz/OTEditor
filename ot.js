@@ -42,4 +42,34 @@ function pos_inv(tree, i) {
 	return answer;
 }
 
+function transform(op1, op2) {
+	if (op2.ty != 'ins') {
+		return op1;
+	}
+	return transform_ins(op1, op2.pos, op2.pri);
+}
 
+function transform_ins(op1, pos, pri) {
+	if (op1.ty == 'ins') {
+		if (op1.pos < pos || (op1.pos == pos && op1.pri < pri)) {
+			return op1;
+		}
+		return { 
+			ty: op1.ty,
+			pos: op1.pos + 1,
+			ch: op1.ch,
+			pri: op1.pri,
+			id: op1.id
+		};
+	} else {
+		//op1.ty is 'del'
+		if (op1.pos < pos) {
+			return op1;
+		}
+		return {
+			ty: op1.ty,
+			ix: op1.ix + 1,
+			id: op1.id
+		};
+	}
+}
