@@ -1,0 +1,26 @@
+{
+  "name": "oteditor",
+  "version": "1.0.0",
+  "description": "A naive implementation of Operational Transformation",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Srijancse/OTEditor.git"
+  },
+  "keywords": [
+    "operational",
+    "transformation",
+    "ot",
+    "collaborative",
+    "editing"
+  ],
+  "author": "Srijan Agarwal",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Srijancse/OTEditor/issues"
+  },
+  "homepage": "https://github.com/Srijancse/OTEditor#readme"
+}
